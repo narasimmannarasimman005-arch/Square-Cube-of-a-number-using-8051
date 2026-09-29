@@ -16,8 +16,25 @@ To write and execute an Assembly language program for finding the square of a gi
 
 ## PROGRAM
 ```
+ORG 00H
 
-<img width="430" height="530" alt="image" src="https://github.com/user-attachments/assets/b06a35ca-2429-46de-b9e5-8b5168bce012" />
+MOV R0,#50H
+
+MOV A,@R0
+
+MOV B,A
+
+MUL AB
+
+INC R0
+
+MOV @R0,A
+
+END
+
+##Calculation
+
+<img width="1556" height="1146" alt="image" src="https://github.com/user-attachments/assets/6e1e2485-7abf-4986-9b4f-4e7a32b71d71" />
 
 
 
@@ -29,9 +46,8 @@ To write and execute an Assembly language program for finding the square of a gi
 ```
 
 ## OUTPUT
+<img width="984" height="592" alt="image" src="https://github.com/user-attachments/assets/ca9e822e-1da5-4659-a88f-4982a6a70c6f" />
 
-
-<img width="315" height="197" alt="image" src="https://github.com/user-attachments/assets/0a496301-cf2d-4baa-91dd-296dfb4fd94b" />
 
 
 ## RESULT
@@ -54,40 +70,33 @@ To write and execute an Assembly language program for finding the cube of a give
 
 ## PROGRAM
 ```
+ORG 00H
 
-ORG 0000H
-LJMP MAIN
+MOV R0,#50H
 
-ORG 0030H
-MAIN:
-    MOV R0, #05H
-    
-    MOV A, R0
-    MOV B, R0
-    MUL AB
-    MOV R1, A
-    MOV R2, B
-    
-    MOV A, R1
-    MOV B, R0
-    MUL AB
-    MOV R3, A
-    MOV R4, B
-    
-    MOV A, R2
-    MOV B, R0
-    MUL AB
-    
-    ADD A, R4
-    MOV R5, A
-    
-    MOV A, B
-    ADDC A, #00H
-    MOV R6, A
+MOV A,@R0
 
-HERE: SJMP HERE
+MOV B,A
+
+MUL AB
+
+MOV B,@R0
+
+MUL AB
+
+INC R0
+
+MOV @R0,A
+
+INC R0
+
+MOV @R0,A
+
 END
 
+
+##Calculation
+<img width="1568" height="1234" alt="image" src="https://github.com/user-attachments/assets/bdb42c68-527d-49e1-a45c-b799737704fb" />
 
 
 
@@ -98,10 +107,7 @@ END
 
 
 ## OUTPUT
-
-<img width="327" height="246" alt="image" src="https://github.com/user-attachments/assets/0e699e58-5583-43c8-851d-ee617d106b3c" />
-
-
+<img width="993" height="719" alt="image" src="https://github.com/user-attachments/assets/017e501a-7f13-44e7-8431-d7148a983784" />
 
 ## RESULT
 Thus, the cube of the given data is calculated using 8051 Keil.
